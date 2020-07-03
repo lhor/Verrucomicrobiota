@@ -14,7 +14,7 @@ We first used [checkM](https://github.com/Ecogenomics/CheckM) to determine compl
 ```
 
 ##### ii. Selection of representative MAGs
-ANI values were determined using [fastANI](https://github.com/ParBLiSS/FastANI) for all MAGs with quality values above 50.
+Pairwise genome-wide average nucleotide identities (ANI) values were determined using [fastANI](https://github.com/ParBLiSS/FastANI) for all MAGs with quality values above 50.
 
 ```
 fastANI --ql q50-3300-MAGs.list --rl q50-3300-MAGs.list -o fastANI-3300_q50-PVC
