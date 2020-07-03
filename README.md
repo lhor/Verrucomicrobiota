@@ -24,3 +24,5 @@ The result was filtered using a identity value of 95% and an alignment fraction 
 quality=%[completion] - 5*[%contamination] +1/2 log10(N50)
 ```
 Selected 444 MAGs and cluster numbers can be found in `MAGs.reps95ANI65AF.representatives.tsv`
+
+### 2.
