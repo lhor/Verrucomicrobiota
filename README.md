@@ -33,7 +33,7 @@ In order to improve the quality of the MAGs, anvio' was used to reduce contamina
 
 Gene predictions and initial gene annotations were determined using Prokka as folllow:
 ```
-for mag in c3	c27	c26	c8	c9	c4	c5	c6	c7	c2	c10	c11	c12	c13	c14	c29	c15	c16	c17	c18	c19	c20	c21	c22	c23	c24; do
+for mag in c3 c27 c26 c8 c9 c4 c5 c6 c7 c2 c10 c11 c12 c13 c14 c29 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24; do
 	prokka --cpus 8 --kingdom Bacteria --outdir ${mag} --locustag ${mag} --metagenome --prefix ${mag} ${mag}.fa;
 done
 ```
@@ -41,4 +41,4 @@ A refined taxonomic determination was determined using [GTDB-tk](https://github.
 ```
 gtdbtk classify_wf -x fa --cpus 24 --genome_dir 00.MAGs/ --out_dir 01.GTDB-k/
 ```
-Abundances were determined using 
+Abundances were determined using
