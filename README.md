@@ -41,4 +41,13 @@ A refined taxonomic determination was determined using [GTDB-tk](https://github.
 ```
 gtdbtk classify_wf -x fa --cpus 24 --genome_dir 00.MAGs/ --out_dir 01.GTDB-k/
 ```
-Abundances were determined as the quotient between the truncated average sequencing depth (TAD80) of each MAG and the sequencing depth of the *rpoB* gene in each metagenome.
+The fraction of MAGs in each metagenome (used as a proxy for abundance) were determined as the quotient between the truncated average sequencing depth (TAD80) of each MAG and the sequencing depth of the *rpoB* gene in each metagenome.
+The TAD80 was determined for all 444 representative MAGs in all metagenomes from 2010, 2011, 2012, and 2012. An summary of the commands used for each determination is available below, where the variables `$MAG` and `$MG` represent each MAG and metagenome respectively.
+
+```
+bowtie2 --reorder --no-unal -f -p 16 -x ${MAG}.bwt2.db -1 ${MG}.1.fa -2 ${MG}.2.fa  > ${MAG}.${MG}.sam;
+samtools view -bS -F 4 -bS ${MAG}.${MG}.sam | samtools sort - ${MAG}.${MG}.sorted;
+bedtools genomecov -ibam ${MAG}.${MG}.sorted.bam -bga > ${MAG}.${MG}.sorted.bam.bg;
+echo -e $MG "\t" $(BedGraph.tad.rb -i ${MAG}.${MG}.sorted.bam.bg -r 0.8);
+rm ${MAG}.${MG}.sam;
+```
