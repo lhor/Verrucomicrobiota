@@ -41,8 +41,10 @@ A refined taxonomic determination was determined using [GTDB-tk](https://github.
 ```
 gtdbtk classify_wf -x fa --cpus 24 --genome_dir 00.MAGs/ --out_dir 01.GTDB-k/
 ```
-The fraction of MAGs in each metagenome (used as a proxy for abundance) were determined as the quotient between the truncated average sequencing depth (TAD80) of each MAG and the sequencing depth of the *rpoB* gene in each metagenome.
-The TAD80 was determined for all 444 representative MAGs in all metagenomes from 2010, 2011, 2012, and 2012. An summary of the commands used for each determination is available below, where the variables `$MAG` and `$MG` represent each MAG and metagenome respectively.
+### 3. MAG abundances
+
+The fraction of MAGs in each metagenome (used as a proxy for abundance) were determined as the quotient between the truncated average sequencing depth (TAD80) of each MAG and the sequencing depth of the *rpoB* gene in each metagenome. The TAD80 was determined using the `BedGraph.tad.rb` script from the [enveomics collection](https://github.com/lmrodriguezr/enveomics).
+The TAD80 was determined for all 444 representative MAGs in all metagenomes from 2010, 2011, 2012, and 2012. A summary of the commands used for each determination is available below, where the variables `$MAG` and `$MG` represent each MAG and metagenome respectively.
 
 ```
 bowtie2 --reorder --no-unal -f -p 16 -x ${MAG}.bwt2.db -1 ${MG}.1.fa -2 ${MG}.2.fa  > ${MAG}.${MG}.sam;
@@ -51,3 +53,4 @@ bedtools genomecov -ibam ${MAG}.${MG}.sorted.bam -bga > ${MAG}.${MG}.sorted.bam.
 echo -e $MG "\t" $(BedGraph.tad.rb -i ${MAG}.${MG}.sorted.bam.bg -r 0.8);
 rm ${MAG}.${MG}.sam;
 ```
+The sequencing depth for rpoB genes was determined for each metagenome using a curated database previously published in [ROCker](https://github.com/lmrodriguezr/rocker) and BLASTx. Results were filtered using the corresponding ROCker filter.
