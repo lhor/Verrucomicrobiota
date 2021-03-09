@@ -25,7 +25,7 @@ quality=%[completion] - 5*[%contamination] +1/2 log10(N50)
 ```
 Selected 444 MAGs and cluster numbers can be found in `MAGs.reps95ANI65AF.representatives.tsv` and the genomic sequences are available here: [insert here figshare link]
 
-### 2. Verrucomicrobiota MAGs from Helgoland
+### 2. *Verrucomicrobiota* MAGs from Helgoland
 
 A total of 182 MAGs were classified as 'Verrucomicrobia' according to checkM and were selected for further analyses. A complete list is available in 'MAGs.reps95.Verrucomicrobiota.list'. A complete summary of all genome and taxonomic features for all 182 MAGs is available in 'MAGs.reps95.Verrucomicrobiota.xls'. To capture a higher intra-population diversity the MAGs within the *Verrucomicrobiota* group, all genomes were de-replicated at 99% ANI resulting in 26 representatives. The two additional MAGs c29 and c6 originated from the clusters c13 and c7. Thus, a total of 26 MAGs (ANI99) and 24 MAGs (ANI95) were determined depending on the ANI cutoff.
 
