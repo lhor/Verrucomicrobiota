@@ -1,7 +1,7 @@
 
 # Guide to data and results
 
-This repository describes the data, analysis, and the results for the manuscript 'Marine *Verrucomicrobiota* populations degrade complex polysaccharides during phytoplankton blooms'.
+This repository describes the data, analysis, and the results for the manuscript '*Verrucomicrobiota* degrade sulfated methyl pentoses during diatom blooms'.
 
 ### 1. Selection of representative Helgoland MAGs
 
