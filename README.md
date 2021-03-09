@@ -1,5 +1,5 @@
 
-# Guide to data, analysis, and results
+# Guide to data and results
 
 This repository describes the data, analysis, and the results for the manuscript 'Marine *Verrucomicrobiota* populations degrade complex polysaccharides during phytoplankton blooms'.
 
@@ -63,8 +63,3 @@ A phylogenetic analysis of recovered MAGs and genomes belonging to *Verrucomicro
 FastTree -gamma -lg < gtdbtk.bac120.user_msa.fasta >PVC-collect-Helgoland.1024.v3.tree
 ```
 The GTDB summary including *Verrucomicrobia* MAGs from Helgoland is available in `03.Verruco-collection/gtdbtk.bac120.summary.tsv`.
-
-### 5. Gene annotations
-### 6. Metaproteomic analyses
-### 7. 16S rRNA gene oligotyping
-### 8. Data availability
