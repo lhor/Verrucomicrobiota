@@ -29,7 +29,7 @@ Selected 444 MAGs and cluster numbers can be found in `MAGs.reps95ANI65AF.repres
 
 A total of 182 MAGs were classified as 'Verrucomicrobia' according to checkM and were selected for further analyses. A complete list is available in 'MAGs.reps95.Verrucomicrobiota.list'. A complete summary of all genome and taxonomic features for all 182 MAGs is available in 'MAGs.reps95.Verrucomicrobiota.xls'. To capture a higher intra-population diversity the MAGs within the *Verrucomicrobiota* group, all genomes were de-replicated at 99% ANI resulting in 26 representatives. The two additional MAGs c29 and c6 originated from the clusters c13 and c7. Thus, a total of 26 MAGs (ANI99) and 24 MAGs (ANI95) were determined depending on the ANI cutoff.
 
-In order to improve the quality of the MAGs, anvio' was used to reduce contamination in some MAGs according to their [recommendations](http://merenlab.org/2017/01/03/loki-the-link-archaea-eukaryota/). The following *Verrucomicrobiota* cleaned and updated genomes were uploaded to the [PRJEB28156 study in ENA](https://www.ebi.ac.uk/ena/browser/view/PRJEB28156). The genomic sequences can also be downloaded from here: [figshre link]
+In order to improve the quality of the MAGs, anvio' was used to reduce contamination in some MAGs according to their [recommendations](http://merenlab.org/2017/01/03/loki-the-link-archaea-eukaryota/). The following *Verrucomicrobiota* cleaned and updated genomes were uploaded to the [PRJEB28156 study in ENA](https://www.ebi.ac.uk/ena/browser/view/PRJEB28156). 
 
 Gene predictions and initial gene annotations were determined using Prokka as folllow:
 ```
